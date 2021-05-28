@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+  <script defer src="face-api.min.js"></script>
+  <script defer src="https://unpkg.com/tone@latest/build/Tone.js"></script>
+  <script defer src="Tonejs-Instruments.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="video">
+        <div>
+            <h1>Virtual Trumpet</h1>
+            <h4>Use your embouchure (lips) to change the notes on a real trumpet!</h4>
+            <button class="stop-button">Turn camera off</button>
+        </div>
+        <video id="video" width="560" height="480" autoplay muted></video>
+    </div>
+
+  <div class="data">
+      <div id="note">C4</div>
+      <div class="keys">    
+          <div id="first" class="key">
+              <div class="keyTop"></div>
+              <div class="keyBottom"></div>
+          </div>
+          <div id="second" class="key">
+            <div class="keyTop"></div>
+            <div class="keyBottom"></div>
+        </div>
+        <div id="third" class="key">
+            <div class="keyTop"></div>
+            <div class="keyBottom"></div>
+        </div>
+      </div>
+      <button class="start-button">Start playing</button>
+  </div>
+  
+</body>
+</html>
