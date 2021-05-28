@@ -12,11 +12,25 @@ body {
       position: relative;
   }
 
+  #videoContainer{
+      position: relative;
+      width: 560px;
+      height: 420px;
+      margin-top: 20px;
+  }
+
+  canvas, #video {
+    position: absolute;
+    bottom:0;
+    left:0;
+  }
+
   .data{
       margin-left: 80px;
+      margin-top: 170px;
   }
   #note{
-      font-size: 56px;
+      font-size: 72px;
   }
   .keys{
       display: flex;
@@ -70,8 +84,23 @@ body {
       background-color: white;
       color:#111;
   }
-  canvas {
-    position: absolute;
-    bottom:0;
-    left:0;
+
+  #slider{
+      position: absolute;
+      bottom: 0;
+      right: -25px;
+      display: flex;
+      align-items: flex-end;
+      height:416px;
+      width:8px;
+      border-radius: 10px;
+      border: 2px solid black;
+      margin-left: 50px;
+      overflow: hidden;
+  }
+
+  #sliderInside{
+      background-color: black;
+      width: 100%;
+      height: 10px;
   }
