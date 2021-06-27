@@ -14,7 +14,7 @@ var mouthMin = mouthWidthMin; // default
 var mouthMax = mouthWidthMax; // default
 var note = 0;
 var prevNote = 0;
-var runningAverageArray = Array(12).fill(0);
+var runningAverageArray = Array(8).fill(0);
 
 // VARIABLES: Sound Creation
 var synth = new Tone.Synth().toMaster();
@@ -85,7 +85,7 @@ document.querySelector("#mouthToggle").addEventListener('change', function() {
         createNotes();
         mouthToggle = "height"
     }
-    runningAverageArray = Array(12).fill(0);
+    runningAverageArray = Array(8).fill(0);
   });
 
 // INIT: Trumpet key event lsteners
@@ -252,7 +252,6 @@ video.addEventListener('play', () => {
         if(percentageEmbouchure < 0){
             percentageEmbouchure = 0;
         }
-        console.log(percentageEmbouchure);
 
         document.querySelector("#sliderInside").style.height = percentageEmbouchure + "%";
 

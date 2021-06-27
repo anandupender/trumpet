@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Face Trumpet</title>
   <link rel="stylesheet" href="main.css">
   <script defer src="face-api.min.js"></script>
   <script defer src="https://unpkg.com/tone@latest/build/Tone.js"></script>
@@ -12,20 +12,21 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-    <div class="video">
-        <div>
-            <h1>Virtual Trumpet</h1>
-            <h4>Use your embouchure (lips) to change the notes on a real trumpet!</h4>
-            <button class="stop-button">Turn camera off</button>
-            <div class="flex row">
-                <h4>Easy (mouth height)</h4>
-                <label class="switch">
-                    <input id="mouthToggle" type="checkbox" checked>
-                    <span class="toggle round"></span>
-                  </label>
-                <h4>Hard (mouth width)</h4>
-            </div>
+    <div class="instructions flex col">
+        <h1>Virtual Trumpet</h1>
+        <div class="flex row">
+            <h4>Easy</h4>
+            <label class="switch">
+                <input id="mouthToggle" type="checkbox" checked>
+                <span class="toggle round"></span>
+                </label>
+            <h4>Hard</h4>
         </div>
+        <button class="button stop-button" style="margin-right: 12px;margin-top: 24px;">Turn camera off</button>
+        <button class="button start-button">Start playing</button>
+    </div>
+
+    <div class="video">
         <div id="videoContainer">
             <video id="video" width="560" height="420" autoplay muted></video>
             <div id="slider">
@@ -52,7 +53,6 @@
             <div class="keyBottom"></div>
         </div>
       </div>
-      <button class="start-button">Start playing</button>
   </div>
   
 </body>

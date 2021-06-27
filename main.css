@@ -17,9 +17,19 @@ body {
       flex-direction: row;
       align-items: center;
   }
+  .col{
+      flex-direction: column;
+      align-items: flex-start;
+  }
 
   h4{
       margin: 0px 8px;
+  }
+
+  .instructions{
+      position: absolute;
+      top:24px;
+      left:36px;
   }
 
   .video{
@@ -32,20 +42,26 @@ body {
       height: 420px;
       margin-top: 20px;
       border: 2px solid black;
+      border-radius: 16px;
   }
 
   canvas, #video {
     position: absolute;
     bottom:0;
     left:0;
+    border-radius: 14px;
   }
 
   .data{
       margin-left: 80px;
-      margin-top: 170px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
   #note{
-      font-size: 72px;
+      font-size: 64px;
+      border-bottom: 4px solid black;
+      margin-bottom: 16px;
   }
   .keys{
       display: flex;
@@ -65,6 +81,10 @@ body {
       margin-bottom: 30px;
   }
 
+  .key:last-of-type{
+      margin-right: 0;
+  }
+
   .keyTop{
       background-color:black;
     width:70px;
@@ -76,14 +96,13 @@ body {
       width: 10px;
       height: 60px;
       border-radius: 0px 0px 2px 2px;
-      /* transition: height 10ms ease; */
   }
 
   .key.down .keyBottom{
     height: 10px;
   }
 
-  button{
+  .button{
       margin-top: 10px;
       margin-bottom: 10px;
       padding: 12px 18px;
@@ -93,9 +112,10 @@ body {
       color:white;
       outline:none;
       border-radius: 4px;
+      text-decoration: none;
   }
-  button:focus {outline:0;}
-  button:hover{
+  .button:focus {outline:0;}
+  .button:hover{
       cursor: pointer;
       background-color: white;
       color:#111;
@@ -104,11 +124,11 @@ body {
   #slider{
       position: absolute;
       bottom: 0;
-      right: -25px;
+      right: -36px;
       display: flex;
       align-items: flex-end;
       height:416px;
-      width:8px;
+      width:10px;
       border-radius: 10px;
       border: 2px solid black;
       margin-left: 50px;
